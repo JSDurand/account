@@ -1,0 +1,225 @@
+#+title: My Accounts
+#+author: 李俊緯
+#+date: 2018/7/14
+#+REVEAL_HLEVEL: 2
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_TRANS: zoom
+#+OPTIONS: toc:nil num:nil todo:nil
+* Accounts
+** DONE day <2018-06-21 Jeu>
+   :PROPERTIES:
+   :total:    190
+   :END:
+
+   | sum | 190 |
+   #+TBLFM: $2=remote(expenses<2018-06-21 Thu>,@2$2)
+   
+   #+NAME: expenses<2018-06-21 Thu>
+   |--------------+-------+--------|
+   | item         | price | note   |
+   |--------------+-------+--------|
+   | total        |   190 |        |
+   | Beef burger  |       |        |
+   |--------------+-------+--------|
+   | with chicken |   100 | good   |
+   |--------------+-------+--------|
+   | balls        |       |        |
+   | MaJi         |    90 | dinner |
+   |--------------+-------+--------|
+   #+TBLFM: @2$2=vsum(@4,@6)
+
+** DONE day <2018-06-22 Fri>
+   :PROPERTIES:
+   :total:    210
+   :END:
+
+   | sum | 210 |
+   #+TBLFM: $2=remote(expenses<2018-06-22 Fri>,@2$2)
+
+   #+NAME: expenses<2018-06-22 Fri>
+   |-------------------+-------+--------------------|
+   | item              | price | note               |
+   |-------------------+-------+--------------------|
+   | total             |   210 |                    |
+   |-------------------+-------+--------------------|
+   | Black Pork burger |   100 | suitable for lunch |
+   |-------------------+-------+--------------------|
+   | big pot           |   110 | delicious          |
+   |-------------------+-------+--------------------|
+   #+TBLFM: @2$2=vsum(@3$2..@4$2)
+
+** DONE day <2018-06-23 Sat>
+   :PROPERTIES:
+   :total:    280
+   :END:
+
+   | sum | 280 |
+   #+TBLFM: $2=remote(expenses<2018-06-23 Sat>,@2$2)
+
+   #+NAME: expenses<2018-06-23 Sat>   
+   |-----------------+-------+-------------------|
+   | item            | price | note              |
+   |-----------------+-------+-------------------|
+   | total           |   280 |                   |
+   | lunch           |    85 | spicy             |
+   | dinner          |    95 | RUI AN            |
+   | first beverage  |    35 | thick milk tea    |
+   | second beverage |    65 | too much          |
+   |-----------------+-------+-------------------|
+   |                 |       | I shall not drink |
+   |-----------------+-------+-------------------|
+   |                 |       | this much         |
+   |-----------------+-------+-------------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-06-24 Dim>
+   :PROPERTIES:
+   :total:    220
+   :END:
+   
+   | sum | 220 |
+   #+TBLFM: $2=remote(expenses<2018-06-24 Dim>,@2$2)
+
+   #+NAME: expenses<2018-06-24 Dim>   
+   |----------+-------+-------------------|
+   | item     | price | note              |
+   |----------+-------+-------------------|
+   | total    |   220 |                   |
+   | lunch    |    50 | spicy noodle      |
+   | dinner   |   110 | the boss gives me |
+   |----------+-------+-------------------|
+   |          |       | $1.               |
+   | beverage |    60 | milk tea          |
+   |----------+-------+-------------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-06-25 Lun>
+   :PROPERTIES:
+   :total:    200
+   :END:
+   
+   | sum | 200 |
+   #+TBLFM: $2=remote(expenses<2018-06-25 Lun>,@2$2)
+
+   #+NAME: expenses<2018-06-25 Lun>   
+   |--------+-------+------------|
+   | item   | price | note       |
+   |--------+-------+------------|
+   | total  |   200 |            |
+   | lunch  |    80 | TAIWAN     |
+   |--------+-------+------------|
+   |        |       | VIETNAN    |
+   | dinner |   120 | pork liver |
+   |--------+-------+------------|
+   |        |       | noodle     |
+   |--------+-------+------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-06-26 Mar>
+   :PROPERTIES:
+   :total:    245
+   :END:
+   
+   | sum | 245 |
+   #+TBLFM: $2=remote(expenses<2018-06-26 Mar>,@2$2)
+
+   #+NAME: expenses<2018-06-26 Mar>   
+   |-----------+-------+------------|
+   | item      | price | note       |
+   |-----------+-------+------------|
+   | total     |   245 |            |
+   | breakfast |    30 | bread      |
+   | lunch     |    60 | four       |
+   |-----------+-------+------------|
+   |           |       | directions |
+   | beverage  |    65 | three      |
+   |-----------+-------+------------|
+   |           |       | bubbles    |
+   | dinner    |    90 | MAJI       |
+   |-----------+-------+------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+** DONE day <2018-06-27 Mer>
+   :PROPERTIES:
+   :total:    270
+   :END:
+   
+   | sum | 270 |
+   #+TBLFM: $2=remote(expenses<2018-06-27 Mer>,@2$2)
+
+   #+NAME: expenses<2018-06-27 Mer>   
+   |-----------+-------+----------------|
+   | item      | price | note           |
+   |-----------+-------+----------------|
+   | total     |   270 |                |
+   | breakfast |    30 | toast          |
+   | lunch     |    95 | chicken rice   |
+   |-----------+-------+----------------|
+   |           |       | w/o bones      |
+   | beverage  |    50 | latte, soulbar |
+   | dinner    |    95 | big pot        |
+   |-----------+-------+----------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+** DONE day <2018-06-28 Jeu>
+   :PROPERTIES:
+   :total:    195
+   :END:
+   
+   | sum | 195 |
+   #+TBLFM: $2=remote(expenses<2018-06-28 Jeu>,@2$2)
+
+   #+NAME: expenses<2018-06-28 Jeu>   
+   |--------+-------+---------|
+   | item   | price | note    |
+   |--------+-------+---------|
+   | total  |   195 |         |
+   | lunch  |   105 | soulbar |
+   | dinner |    90 | MAJI    |
+   |--------+-------+---------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+** DONE day <2018-06-29 Ven>
+   :PROPERTIES:
+   :total:    610
+   :END:
+   
+   | sum | 610 |
+   #+TBLFM: $2=remote(expenses<2018-06-29 Ven>,@2$2)
+
+   #+NAME: expenses<2018-06-29 Ven>   
+   |--------+-------+------------|
+   | item   | price | note       |
+   |--------+-------+------------|
+   | total  |   610 |            |
+   | lunch  |   105 | soulbar    |
+   | dinner |   505 | fancy meat |
+   |--------+-------+------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+** DONE day <2018-06-30 Sat>
+   :PROPERTIES:
+   :total:    160
+   :END:
+   
+   | sum | 160 |
+   #+TBLFM: $2=remote(expenses<2018-06-30 Sat>,@2$2)
+
+   #+NAME: expenses<2018-06-30 Sat>   
+   |----------+-------+---------|
+   | item     | price | note    |
+   |----------+-------+---------|
+   | total    |   160 |         |
+   | beverage |    55 | Bo Si   |
+   | dinner   |   105 | big pot |
+   |----------+-------+---------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+* Summary
+  The total cost for this month:
+  #+BEGIN_SRC emacs-lisp :exports results
+    (defun org-get-account-all ()
+      (apply '+ (mapcar '(lambda (x) (if (null x) 0 (string-to-number x)))
+			(org-map-entries (lambda ()
+					   (org-entry-get nil "TOTAL"))))))
+
+    (org-get-account-all)
+  #+END_SRC
+
+  #+RESULTS:
+  : 2580
