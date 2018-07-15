@@ -2,7 +2,9 @@
 #+author: 李俊緯
 #+date: 2018/7/14
 #+REVEAL_HLEVEL: 2
-#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+# #+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_ROOT: file:///Users/durand/org/account/reveal.js-2.1
+#+REVEAL_THEME: sky
 #+REVEAL_TRANS: zoom
 #+OPTIONS: toc:nil num:nil todo:nil
 * Accounts
@@ -214,12 +216,13 @@
   The total cost for this month:
   #+BEGIN_SRC emacs-lisp :exports results
     (defun org-get-account-all ()
+      "Obtain the cost of each day"
       (tabularize (mapcar '(lambda (x) (if (null x) 0 (string-to-number x)))
 			  (org-map-entries (lambda ()
 					     (org-entry-get nil "TOTAL"))))))
 
     (defun tabularize (a_list)
-      "summarize and tabularize"
+      "Summarize and tabularize"
       (let ((count 1)
 	    (week '((1 0)))
 	    (week_count 1))
