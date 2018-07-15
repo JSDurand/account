@@ -214,12 +214,29 @@
   The total cost for this month:
   #+BEGIN_SRC emacs-lisp :exports results
     (defun org-get-account-all ()
-      (apply '+ (mapcar '(lambda (x) (if (null x) 0 (string-to-number x)))
-			(org-map-entries (lambda ()
-					   (org-entry-get nil "TOTAL"))))))
+      (tabularize (mapcar '(lambda (x) (if (null x) 0 (string-to-number x)))
+			  (org-map-entries (lambda ()
+					     (org-entry-get nil "TOTAL"))))))
 
-    (org-get-account-all)
+    (defun tabularize (a_list)
+      "summarize and tabularize"
+      (let ((count 1)
+	    (week '((1 0)))
+	    (week_count 1))
+	(dolist (elem a_list week)
+	  (setq count (+ 1 count))
+	  (if (= (% count 7) 0)
+	      (progn
+		(setq week_count (+ 1 week_count))
+		(add-to-list 'week `(,week_count 0))))
+	  (setf (cdr (assoc week_count week)) (list (+ (cadr (assoc week_count week)) elem))))))
+
+    (setq total-list (org-get-account-all))
+
+    (add-to-list 'total-list `("all" ,(apply '+ (mapcar 'cadr total-list))))
   #+END_SRC
 
   #+RESULTS:
-  : 2580
+  | all | 2580 |
+  |   2 | 1680 |
+  |   1 |  900 |

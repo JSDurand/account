@@ -165,7 +165,7 @@
    |----------+-------+----------------|
    #+TBLFM: @2$2=vsum(@3$2..@>$2)
 
-** DONE day <2018-07-08 Dim>                                        :account:
+** DONE day <2018-07-08 Dim>
    :PROPERTIES:
    :total:    219
    :END:
@@ -188,7 +188,7 @@
    |--------+-------+-------------------|
    #+TBLFM: @2$2=vsum(@3$2..@>$2)
 
-** DONE day <2018-07-09 Lun>                                        :account:
+** DONE day <2018-07-09 Lun>
    :PROPERTIES:
    :total:    254
    :END:
@@ -212,7 +212,7 @@
    |-----------+-------+-------------|
    #+TBLFM: @2$2=vsum(@3$2..@>$2)
 
-** DONE day <2018-07-10 Mar>                                        :account:
+** DONE day <2018-07-10 Mar>
    :PROPERTIES:
    :total:    175
    :END:
@@ -235,7 +235,7 @@
    |-----------+-------+-----------------------|
    #+TBLFM: @2$2=vsum(@3$2..@>$2)
 
-** DONE day <2018-07-11 Mer>                                        :account:
+** DONE day <2018-07-11 Mer>
    :PROPERTIES:
    :total:    230
    :END:
@@ -257,7 +257,7 @@
    |----------+-------+-----------------|
    #+TBLFM: @2$2=vsum(@3$2..@>$2)
 
-** DONE day <2018-07-12 Jeu>                                        :account:
+** DONE day <2018-07-12 Jeu>
    :PROPERTIES:
    :total:    220
    :END:
@@ -279,7 +279,7 @@
    |----------+-------+-----------------|
    #+TBLFM: @2$2=vsum(@3$2..@>$2)
 
-** DONE day <2018-07-13 Ven>                                        :account:
+** DONE day <2018-07-13 Ven>
    :PROPERTIES:
    :total:    340
    :END:
@@ -301,7 +301,7 @@
    |----------+-------+-----------|
    #+TBLFM: @2$2=vsum(@3$2..@>$2)
 
-** DONE day <2018-07-14 Sam>                                        :account:
+** DONE day <2018-07-14 Sam>
    :PROPERTIES:
    :total:    224
    :END:
@@ -325,3 +325,52 @@
    |----------+-------+-----------------|
    #+TBLFM: @2$2=vsum(@3$2..@>$2)
 
+** DONE day <2018-07-15 Dim>                                        :account:
+   :PROPERTIES:
+   :total:    101
+   :END:
+   
+   | sum | 101 |
+   #+TBLFM: $2=remote(expenses<2018-07-15 Dim>,@2$2)
+
+   #+NAME: expenses<2018-07-15 Dim>   
+   |-------+-------+----------------------|
+   | item  | price | note                 |
+   |-------+-------+----------------------|
+   | total |   101 |                      |
+   | lunch |   101 | family mart and 7-11 |
+   |-------+-------+----------------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+
+* Summary
+  The total cost for this month:
+  #+BEGIN_SRC emacs-lisp :exports results
+    (defun org-get-account-all ()
+      (tabularize (mapcar '(lambda (x) (if (null x) 0 (string-to-number x)))
+			  (org-map-entries (lambda ()
+					     (org-entry-get nil "TOTAL"))))))
+
+    (defun tabularize (a_list)
+      "summarize and tabularize"
+      (let ((count 1)
+	    (week '((1 0)))
+	    (week_count 1))
+	(dolist (elem a_list week)
+	  (setq count (+ 1 count))
+	  (if (= (% count 7) 0)
+	      (progn
+		(setq week_count (+ 1 week_count))
+		(add-to-list 'week `(,week_count 0))))
+	  (setf (cdr (assoc week_count week)) (list (+ (cadr (assoc week_count week)) elem))))))
+
+    (setq total-list (org-get-account-all))
+
+    (add-to-list 'total-list `("all" ,(apply '+ (mapcar 'cadr total-list))))
+  #+END_SRC
+
+  #+RESULTS:
+  | all | 3891 |
+  |   3 |  885 |
+  |   2 | 1897 |
+  |   1 | 1109 |
