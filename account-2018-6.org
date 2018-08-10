@@ -2,7 +2,7 @@
 #+author: 李俊緯
 #+date: 2018/7/14
 #+REVEAL_HLEVEL: 2
-#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/reveal.js/3.0.0/
 #+REVEAL_TRANS: zoom
 #+OPTIONS: toc:nil num:nil todo:nil
 * Accounts
@@ -214,22 +214,36 @@
   The total cost for this month:
   #+BEGIN_SRC emacs-lisp :exports results
     (defun org-get-account-all ()
-      (tabularize (mapcar '(lambda (x) (if (null x) 0 (string-to-number x)))
-			  (org-map-entries (lambda ()
-					     (org-entry-get nil "TOTAL"))))))
+      (tabularize_day (mapcar 'string-to-number
+			      (seq-filter 'non-null
+					  (org-map-entries (lambda ()
+							     (org-entry-get nil "TOTAL")))))))
 
-    (defun tabularize (a_list)
+    (defun tabularize_week (a_list)
       "summarize and tabularize"
       (let ((count 1)
-	    (week '((1 0)))
-	    (week_count 1))
-	(dolist (elem a_list week)
+	    (day '((1 0)))
+	    (day_count 1))
+	(dolist (elem a_list day)
 	  (setq count (+ 1 count))
 	  (if (= (% count 7) 0)
 	      (progn
-		(setq week_count (+ 1 week_count))
-		(add-to-list 'week `(,week_count 0))))
-	  (setf (cdr (assoc week_count week)) (list (+ (cadr (assoc week_count week)) elem))))))
+		(setq day_count (+ 1 day_count))
+		(add-to-list 'day `(,day_count 0))))
+	  (setf (cdr (assoc day_count day)) (list (+ (cadr (assoc day_count day)) elem))))))
+
+    (defun tabularize_day (a_list)
+      "summarize and tabularize"
+      (let ((day '())
+	    (day_count 1))
+	(dolist (elem a_list day)
+	  (progn
+	    (add-to-list 'day `(,day_count ,elem))
+	    (setq day_count (+ 1 day_count))))))
+
+    (defun non-null (x)
+      "Filter function"
+      (not (null x)))
 
     (setq total-list (org-get-account-all))
 
@@ -238,5 +252,15 @@
 
   #+RESULTS:
   | all | 2580 |
-  |   2 | 1680 |
-  |   1 |  900 |
+  |  10 |  160 |
+  |   9 |  610 |
+  |   8 |  195 |
+  |   7 |  270 |
+  |   6 |  245 |
+  |   5 |  200 |
+  |   4 |  220 |
+  |   3 |  280 |
+  |   2 |  210 |
+  |   1 |  190 |
+* link test
+[[*day <2018-06-21 Jeu>][<2018-06-21 Jeu>]]

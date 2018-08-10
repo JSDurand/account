@@ -1,4 +1,11 @@
-* Accounts
+#+title: My Accounts
+#+author: 李俊緯
+#+date: 2018/8/1
+#+REVEAL_HLEVEL: 2
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_TRANS: zoom
+#+OPTIONS: toc:nil num:nil todo:nil
+* Accounts  
 ** DONE day <2018-07-01 Dim>
    :PROPERTIES:
    :total:    305
@@ -325,52 +332,456 @@
    |----------+-------+-----------------|
    #+TBLFM: @2$2=vsum(@3$2..@>$2)
 
-** DONE day <2018-07-15 Dim>                                        :account:
+** DONE day <2018-07-15 Dim>
    :PROPERTIES:
-   :total:    101
+   :total:    181
    :END:
    
-   | sum | 101 |
+   | sum | 181 |
    #+TBLFM: $2=remote(expenses<2018-07-15 Dim>,@2$2)
 
    #+NAME: expenses<2018-07-15 Dim>   
-   |-------+-------+----------------------|
-   | item  | price | note                 |
-   |-------+-------+----------------------|
-   | total |   101 |                      |
-   | lunch |   101 | family mart and 7-11 |
-   |-------+-------+----------------------|
+   |--------+-------+----------------------|
+   | item   | price | note                 |
+   |--------+-------+----------------------|
+   | total  |   181 |                      |
+   | lunch  |   101 | family mart and 7-11 |
+   | dinner |    80 | TAIWAN VIETNAN       |
+   |--------+-------+----------------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+** DONE day <2018-07-16 Lun>
+   :PROPERTIES:
+   :total:    240
+   :END:
+   
+   | sum | 240 |
+   #+TBLFM: $2=remote(expenses<2018-07-16 Lun>,@2$2)
+
+   #+NAME: expenses<2018-07-16 Lun>   
+   |----------+-------+---------|
+   | item     | price | note    |
+   |----------+-------+---------|
+   | total    |   240 |         |
+   | lunch    |    50 | noodle  |
+   | beverage |    70 | 7-11    |
+   | dinner   |   120 | big pot |
+   |----------+-------+---------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+** DONE day <2018-07-17 Mar>
+   :PROPERTIES:
+   :total:    220
+   :END:
+   
+   | sum | 220 |
+   #+TBLFM: $2=remote(expenses<2018-07-17 Mar>,@2$2)
+
+   #+NAME: expenses<2018-07-17 Mar>   
+   |----------+-------+----------------|
+   | item     | price | note           |
+   |----------+-------+----------------|
+   | total    |   220 |                |
+   |----------+-------+----------------|
+   | lunch    |    90 | twenty-eight   |
+   |----------+-------+----------------|
+   | beverage |    50 | One Way        |
+   |----------+-------+----------------|
+   | dinner   |    80 | TAIWAN VIETNAN |
+   |----------+-------+----------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+** DONE day <2018-07-18 Mer>
+   :PROPERTIES:
+   :total:    2060
+   :END:
+   
+   | sum | 2060 |
+   #+TBLFM: $2=remote(expenses<2018-07-18 Mer>,@2$2)
+
+   #+NAME: expenses<2018-07-18 Mer>   
+   |------------+-------+---------------------|
+   | item       | price | note                |
+   |------------+-------+---------------------|
+   | total      |  2060 |                     |
+   |------------+-------+---------------------|
+   | lunch      |    95 | four directions     |
+   |------------+-------+---------------------|
+   | beverage   |    55 | Yi Fang             |
+   |------------+-------+---------------------|
+   | dinner     |   140 | Old Der Gi          |
+   |------------+-------+---------------------|
+   | hard drive |  1770 | TOSHSIBA for backup |
+   |------------+-------+---------------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+** DONE day <2018-07-19 Jeu>
+   :PROPERTIES:
+   :total:    595
+   :END:
+   
+   | sum | 595 |
+   #+TBLFM: $2=remote(expenses<2018-07-19 Jeu>,@2$2)
+
+   #+NAME: expenses<2018-07-19 Jeu>   
+   |-----------+-------+------------------------------|
+   | item      | price | note                         |
+   |-----------+-------+------------------------------|
+   | total     |   595 |                              |
+   |-----------+-------+------------------------------|
+   | breakfast |    50 | spicy noodle                 |
+   |-----------+-------+------------------------------|
+   | beverage  |    70 | extra large latte            |
+   |-----------+-------+------------------------------|
+   | lunch     |    65 | four directions              |
+   |-----------+-------+------------------------------|
+   | dinner    |   140 | big pot                      |
+   |-----------+-------+------------------------------|
+   | misc      |   270 | tooth paste and roach killer |
+   |-----------+-------+------------------------------|
    #+TBLFM: @2$2=vsum(@3$2..@>$2)
 
+** DONE day <2018-07-20 Ven>
+   :PROPERTIES:
+   :total:    280
+   :END:
+   
+   | sum | 280 |
+   #+TBLFM: $2=remote(expenses<2018-07-20 Ven>,@2$2)
+
+   #+NAME: expenses<2018-07-20 Ven>   
+   |----------+-------+---------------------------|
+   | item     | price | note                      |
+   |----------+-------+---------------------------|
+   | total    |   280 |                           |
+   |----------+-------+---------------------------|
+   | lunch    |    90 | four directions           |
+   |----------+-------+---------------------------|
+   | beverage |    50 | red bean milk tea: GUILTY |
+   |----------+-------+---------------------------|
+   | dinner   |    85 | big pot                   |
+   |----------+-------+---------------------------|
+   | snack    |    55 | miti bank                 |
+   |----------+-------+---------------------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-07-21 Sam>
+   :PROPERTIES:
+   :total:    0
+   :END:
+   
+   | sum | 0 |
+   #+TBLFM: $2=remote(expenses<2018-07-21 Sam>,@2$2)
+
+   #+NAME: expenses<2018-07-21 Sam>   
+   |-----------+-------+-----------------|
+   | item      | price | note            |
+   |-----------+-------+-----------------|
+   | total     |     0 |                 |
+   |-----------+-------+-----------------|
+   | no record |     0 | No Record Toady |
+   |-----------+-------+-----------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-07-22 Dim>
+   :PROPERTIES:
+   :total:    191
+   :END:
+   
+   | sum | 191 |
+   #+TBLFM: $2=remote(expenses<2018-07-22 Dim>,@2$2)
+
+   #+NAME: expenses<2018-07-22 Dim>   
+   |--------+-------+-----------------|
+   | item   | price | note            |
+   |--------+-------+-----------------|
+   | total  |   191 |                 |
+   |--------+-------+-----------------|
+   | dinner |   115 | four directions |
+   | snack  |    76 | 7-11            |
+   |--------+-------+-----------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-07-23 Lun>
+   :PROPERTIES:
+   :total:    287
+   :END:
+   
+   | sum | 287 |
+   #+TBLFM: $2=remote(expenses<2018-07-23 Lun>,@2$2)
+
+   #+NAME: expenses<2018-07-23 Lun>   
+   |----------+-------+----------------|
+   | item     | price | note           |
+   |----------+-------+----------------|
+   | total    |   287 |                |
+   |----------+-------+----------------|
+   | lunch    |   120 | Banshoduko     |
+   |----------+-------+----------------|
+   | beverage |    55 | Georg Pack     |
+   |----------+-------+----------------|
+   | dinner   |    90 | TAIWAN VIETNAN |
+   |----------+-------+----------------|
+   | snack    |    22 | Family Mart    |
+   |----------+-------+----------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-07-24 Mar>
+   :PROPERTIES:
+   :total:    300
+   :END:
+   
+   | sum | 300 |
+   #+TBLFM: $2=remote(expenses<2018-07-24 Mar>,@2$2)
+
+   #+NAME: expenses<2018-07-24 Mar>   
+   |-----------+-------+------------------------|
+   | item      | price | note                   |
+   |-----------+-------+------------------------|
+   | total     |   300 |                        |
+   |-----------+-------+------------------------|
+   | breakfast |    65 | noodle Chen            |
+   |-----------+-------+------------------------|
+   | lunch     |    60 | four directions        |
+   |-----------+-------+------------------------|
+   | beverage  |    65 | some bubble; MITI BANK |
+   |-----------+-------+------------------------|
+   | dinner    |   110 | MONNA                  |
+   |-----------+-------+------------------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-07-25 Mer>
+   :PROPERTIES:
+   :total:    260
+   :END:
+   
+   | sum | 260 |
+   #+TBLFM: $2=remote(expenses<2018-07-25 Mer>,@2$2)
+
+   #+NAME: expenses<2018-07-25 Mer>   
+   |----------+-------+------------|
+   | item     | price | note       |
+   |----------+-------+------------|
+   | total    |   260 |            |
+   |----------+-------+------------|
+   | lunch    |    65 | Bistro     |
+   |----------+-------+------------|
+   | beverage |    60 | Hello Café |
+   |----------+-------+------------|
+   | dinner   |   135 | Phô        |
+   |----------+-------+------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-07-26 Jeu>
+   :PROPERTIES:
+   :total:    255
+   :END:
+   
+   | sum | 255 |
+   #+TBLFM: $2=remote(expenses<2018-07-26 Jeu>,@2$2)
+
+   #+NAME: expenses<2018-07-26 Jeu>   
+   |----------+-------+-------------|
+   | item     | price | note        |
+   |----------+-------+-------------|
+   | total    |   255 |             |
+   |----------+-------+-------------|
+   | lunch    |    65 | Noodle Chen |
+   |----------+-------+-------------|
+   | beverage |    60 | Bluedeer    |
+   |----------+-------+-------------|
+   | dinner   |    90 | MAJI        |
+   |----------+-------+-------------|
+   | snack    |    40 | Family Mart |
+   |----------+-------+-------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-07-27 Ven>
+   :PROPERTIES:
+   :total:    279
+   :END:
+   
+   | sum | 279 |
+   #+TBLFM: $2=remote(expenses<2018-07-27 Ven>,@2$2)
+
+   #+NAME: expenses<2018-07-27 Ven>   
+   |-----------+-------+----------------|
+   | item      | price | note           |
+   |-----------+-------+----------------|
+   | total     |   279 |                |
+   |-----------+-------+----------------|
+   | breakfast |    50 | Spicy Noodle   |
+   |-----------+-------+----------------|
+   | lunch     |   124 | Xiao Fu        |
+   |-----------+-------+----------------|
+   | dinner    |   105 | TAIWAN VIETNAN |
+   |-----------+-------+----------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-07-28 Sam>
+   :PROPERTIES:
+   :total:    290
+   :END:
+   
+   | sum | 290 |
+   #+TBLFM: $2=remote(expenses<2018-07-28 Sam>,@2$2)
+
+   #+NAME: expenses<2018-07-28 Sam>   
+   |--------+-------+-------------|
+   | item   | price | note        |
+   |--------+-------+-------------|
+   | total  |   290 |             |
+   |--------+-------+-------------|
+   | lunch  |    65 | Noodle Chen |
+   |--------+-------+-------------|
+   | dinner |   225 | Rice Curry  |
+   |--------+-------+-------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-07-29 Dim>
+   :PROPERTIES:
+   :total:    205
+   :END:
+   
+   | sum | 205 |
+   #+TBLFM: $2=remote(expenses<2018-07-29 Dim>,@2$2)
+
+   #+NAME: expenses<2018-07-29 Dim>   
+   |--------+-------+-----------------|
+   | item   | price | note            |
+   |--------+-------+-----------------|
+   | total  |   205 |                 |
+   |--------+-------+-----------------|
+   | lunch  |   100 | four directions |
+   |--------+-------+-----------------|
+   | dinner |   105 | big pot         |
+   |--------+-------+-----------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+
+** DONE day <2018-07-30 Lun>
+   :PROPERTIES:
+   :total:    259
+   :END:
+   
+   | sum | 259 |
+   #+TBLFM: $2=remote(expenses<2018-07-30 Lun>,@2$2)
+
+   #+NAME: expenses<2018-07-30 Lun>   
+   |------------+-------+-------------|
+   | item       | price | note        |
+   |------------+-------+-------------|
+   | total      |   259 |             |
+   |------------+-------+-------------|
+   | BRUNVERAGE |    64 | Xiao Fu     |
+   |------------+-------+-------------|
+   | dinner     |   150 | DAPU        |
+   |------------+-------+-------------|
+   | beverage   |    45 | Spring Fang |
+   |------------+-------+-------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
+** DONE day <2018-07-31 Mar>
+   :PROPERTIES:
+   :total:    270
+   :END:
+   
+   | sum | 270 |
+   #+TBLFM: $2=remote(expenses<2018-07-31 Mar>,@2$2)
+
+   #+NAME: expenses<2018-07-31 Mar>   
+   |-----------+-------+-----------------|
+   | item      | price | note            |
+   |-----------+-------+-----------------|
+   | total     |   270 |                 |
+   |-----------+-------+-----------------|
+   | Breakfast |    30 | Xiao Fu         |
+   |-----------+-------+-----------------|
+   | lunch     |   100 | four directions |
+   |-----------+-------+-----------------|
+   | dinner    |   105 | big pot         |
+   |-----------+-------+-----------------|
+   | beverage  |    35 | THE ALLEY       |
+   |-----------+-------+-----------------|
+   #+TBLFM: @2$2=vsum(@3$2..@>$2)
 
 * Summary
   The total cost for this month:
   #+BEGIN_SRC emacs-lisp :exports results
     (defun org-get-account-all ()
-      (tabularize (mapcar '(lambda (x) (if (null x) 0 (string-to-number x)))
-			  (org-map-entries (lambda ()
-					     (org-entry-get nil "TOTAL"))))))
+      (tabularize_day (mapcar 'string-to-number
+			      (seq-filter 'non-null
+					  (org-map-entries (lambda ()
+							     (org-entry-get nil "TOTAL")))))))
 
-    (defun tabularize (a_list)
+    (defun tabularize_week (a_list)
       "summarize and tabularize"
       (let ((count 1)
-	    (week '((1 0)))
-	    (week_count 1))
-	(dolist (elem a_list week)
+	    (day '((1 0)))
+	    (day_count 1))
+	(dolist (elem a_list day)
 	  (setq count (+ 1 count))
 	  (if (= (% count 7) 0)
 	      (progn
-		(setq week_count (+ 1 week_count))
-		(add-to-list 'week `(,week_count 0))))
-	  (setf (cdr (assoc week_count week)) (list (+ (cadr (assoc week_count week)) elem))))))
+		(setq day_count (+ 1 day_count))
+		(add-to-list 'day `(,day_count 0))))
+	  (setf (cdr (assoc day_count day)) (list (+ (cadr (assoc day_count day)) elem))))))
+
+    (defun tabularize_day (a_list)
+      "summarize and tabularize"
+      (let ((day '())
+	    (day_count 1))
+	(dolist (elem a_list day)
+	  (progn
+	    (add-to-list 'day `(,day_count ,elem))
+	    (setq day_count (+ 1 day_count))))))
+
+    (defun non-null (x)
+      "Filter function"
+      (not (null x)))
+
+    (defun graphication (a-list)
+      "Make a graph"
+      (mapcar (lambda (xs)
+		(let* ((real-value (cadr xs))
+		       (value-part (/ real-value 10)))
+		  (setf (cadr xs) (if (> value-part 90)
+				      (concat (make-list 90 ?-))
+				    (concat (make-list value-part ?-))))
+		  (append xs (list (format "%d" real-value)))))
+	      a-list))
 
     (setq total-list (org-get-account-all))
 
     (add-to-list 'total-list `("all" ,(apply '+ (mapcar 'cadr total-list))))
+
+    (graphication total-list)
   #+END_SRC
 
   #+RESULTS:
-  | all | 3891 |
-  |   3 |  885 |
-  |   2 | 1897 |
-  |   1 | 1109 |
+  | all | ------------------------------------------------------------------------------------------ | 9962 |
+  |  31 | ---------------------------                                                                |  270 |
+  |  30 | -------------------------                                                                  |  259 |
+  |  29 | --------------------                                                                       |  205 |
+  |  28 | -----------------------------                                                              |  290 |
+  |  27 | ---------------------------                                                                |  279 |
+  |  26 | -------------------------                                                                  |  255 |
+  |  25 | --------------------------                                                                 |  260 |
+  |  24 | ------------------------------                                                             |  300 |
+  |  23 | ----------------------------                                                               |  287 |
+  |  22 | -------------------                                                                        |  191 |
+  |  21 |                                                                                            |    0 |
+  |  20 | ----------------------------                                                               |  280 |
+  |  19 | -----------------------------------------------------------                                |  595 |
+  |  18 | ------------------------------------------------------------------------------------------ | 2060 |
+  |  17 | ----------------------                                                                     |  220 |
+  |  16 | ------------------------                                                                   |  240 |
+  |  15 | ------------------                                                                         |  181 |
+  |  14 | ----------------------                                                                     |  224 |
+  |  13 | ----------------------------------                                                         |  340 |
+  |  12 | ----------------------                                                                     |  220 |
+  |  11 | -----------------------                                                                    |  230 |
+  |  10 | -----------------                                                                          |  175 |
+  |   9 | -------------------------                                                                  |  254 |
+  |   8 | ---------------------                                                                      |  219 |
+  |   7 | --------------------                                                                       |  209 |
+  |   6 | ------------------------------------------------                                           |  481 |
+  |   5 | --------------------------------                                                           |  329 |
+  |   4 | -------------------------------------                                                      |  375 |
+  |   3 | ---------------------                                                                      |  219 |
+  |   2 | ---------------------                                                                      |  210 |
+  |   1 | ------------------------------                                                             |  305 |
